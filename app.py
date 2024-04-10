@@ -21,8 +21,8 @@ def launch():
     # ^PQ1
     # ^XZ'''.encode()
     #     mysocket.send(contenu)
-    #     mysocket.close() # fermeture de la connexion
-        return '{"data": "Version 3"}'       
+         mysocket.close() # fermeture de la connexion
+         return '{"data": "Version 3"}'       
         
     
     except Exception as e:
