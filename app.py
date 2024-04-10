@@ -1,5 +1,6 @@
 #https://www.trading-attitude.com/comment-lancer-un-script-python-depuis-google-sheets
 # le port local de la web app est http://127.0.0.1:5000
+#cette api est deployée sur Render. Sur sheets, on utilise extensions, apps scripts pour envoyer une requete sur render qui exécute ce code
 from flask import Flask
 import socket
 import subprocess
