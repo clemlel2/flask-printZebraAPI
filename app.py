@@ -19,11 +19,12 @@ def launch():
     ^FN1^FDJohn^FS
     ^FN2^FDDoe^FS
     ^PQ1
-    ^XZ'''.encode()   
+    ^XZ'''.encode()
+        print("I'm here")   
             #contenu_binaire = contenu.encode()  # Convertir en représentation binaire
         mysocket.send(contenu)
         mysocket.close() # fermeture de la connexion
-        return '{"data": "Hello, World!"}'       
+        return '{"data": "Version 2"}'       
         
     
     except Exception as e:
@@ -35,4 +36,4 @@ def launch():
     
 if __name__ == '__main__':
     # Run the Flask application    
-    app.run(debug=True)
+    app.run()#debug=True
