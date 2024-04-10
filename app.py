@@ -12,9 +12,8 @@ def launch():
     # Specify the path to your .bat or .cmd file
 
     try:
-    #     mysocket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-    #     port = 9100
-    #     mysocket.connect(("172.31.40.105", port))
+         mysocket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+         mysocket.connect(("172.31.40.105", 9100))
     #     contenu = f'''^XA
     # ^XFE:TEMPLATE.ZPL^FS
     # ^FN1^FDJohn^FS
@@ -23,7 +22,7 @@ def launch():
     # ^XZ'''.encode()
     #     mysocket.send(contenu)
     #     mysocket.close() # fermeture de la connexion
-        return '{"data": "Version 2"}'       
+        return '{"data": "Version 3"}'       
         
     
     except Exception as e:
