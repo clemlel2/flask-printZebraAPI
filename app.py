@@ -4,8 +4,10 @@
 from flask import Flask
 import socket
 import subprocess
+from flask_cors import CORS
 
 app = Flask(__name__)
+CORS(app)  # Active les en-têtes CORS pour toutes les routes
 
 @app.route('/')
 def launch():
@@ -14,13 +16,13 @@ def launch():
     try:
          mysocket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
          mysocket.connect(("172.31.40.105", 9100))
-    #     contenu = f'''^XA
-    # ^XFE:TEMPLATE.ZPL^FS
-    # ^FN1^FDJohn^FS
-    # ^FN2^FDDoe^FS
-    # ^PQ1
-    # ^XZ'''.encode()
-    #     mysocket.send(contenu)
+         contenu = f'''^XA
+    ^XFE:TEMPLATE.ZPL^FS
+    ^FN1^FDJohn^FS
+    ^FN2^FDDoe^FS
+    ^PQ1
+    ^XZ'''.encode()
+         mysocket.send(contenu)
          mysocket.close() # fermeture de la connexion
          return '{"data": "Version 3"}'       
         
